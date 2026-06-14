@@ -112,7 +112,7 @@ export function MarsMissionPlanner({ onPlanMission }: MarsMissionPlannerProps) {
               max={maxYear}
               className="text-center"
             />
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-muted-foreground/70">
               {launchYear} (in {launchYear - currentYear} years)
             </p>
           </div>
@@ -252,9 +252,9 @@ export function MarsMissionPlanner({ onPlanMission }: MarsMissionPlannerProps) {
         </div>
 
         {/* Mission Summary */}
-        <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-          <p className="font-semibold text-green-900 mb-2">Mission Summary</p>
-          <div className="text-sm text-green-800 space-y-1">
+        <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
+          <p className="font-semibold text-green-600 mb-2">Mission Summary</p>
+          <div className="text-sm text-green-600/90 space-y-1">
             <p>
               • <span className="font-semibold">Launch:</span> {launchYear}
             </p>

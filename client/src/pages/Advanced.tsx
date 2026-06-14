@@ -25,7 +25,7 @@ export default function Advanced() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-white to-gray-50 flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <header className="border-b border-border/50 bg-background/80 backdrop-blur-md sticky top-0 z-50">
         <div className="container flex h-16 md:h-20 items-center justify-between">
@@ -100,12 +100,12 @@ export default function Advanced() {
                 ) : (
                   <div className="card-elevated p-12 text-center space-y-4">
                     <div className="flex justify-center">
-                      <div className="p-4 rounded-lg bg-gray-100">
-                        <Zap className="w-12 h-12 text-gray-400" />
+                      <div className="p-4 rounded-lg bg-muted">
+                        <Zap className="w-12 h-12 text-muted-foreground" />
                       </div>
                     </div>
                     <h3 className="text-lg font-semibold">No Comparison Yet</h3>
-                    <p className="text-gray-600">
+                    <p className="text-muted-foreground">
                       Enter mission parameters on the left to compare propulsion
                       systems side-by-side.
                     </p>

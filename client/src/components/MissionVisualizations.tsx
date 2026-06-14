@@ -153,16 +153,16 @@ export function MissionVisualizations({
 
               <div className="grid grid-cols-3 gap-4 mt-6">
                 {massCompositionData.map((item, idx) => (
-                  <div key={item.name} className="text-center p-3 bg-gray-50 rounded-lg">
+                  <div key={item.name} className="text-center p-3 bg-muted/50 rounded-lg">
                     <div
                       className="w-3 h-3 rounded-full mx-auto mb-2"
                       style={{ backgroundColor: COLORS[idx] }}
                     />
                     <p className="text-sm font-semibold">{item.name}</p>
-                    <p className="text-lg font-bold text-blue-600">
+                    <p className="text-lg font-bold text-primary">
                       {formatPercent(item.percentage)}
                     </p>
-                    <p className="text-xs text-gray-600">{formatMass(item.value)}</p>
+                    <p className="text-xs text-muted-foreground">{formatMass(item.value)}</p>
                   </div>
                 ))}
               </div>
@@ -172,7 +172,7 @@ export function MissionVisualizations({
           {/* Engine Comparison Bar Chart */}
           <TabsContent value="comparison" className="mt-6">
             <div className="space-y-4">
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-muted-foreground">
                 Comparison of all three propulsion systems for the same mission
                 parameters
               </p>
@@ -194,13 +194,13 @@ export function MissionVisualizations({
 
               <div className="grid grid-cols-3 gap-4 mt-6">
                 {engineComparisonData.map((item) => (
-                  <div key={item.engine} className="p-3 bg-gray-50 rounded-lg">
+                  <div key={item.engine} className="p-3 bg-muted/50 rounded-lg">
                     <p className="text-sm font-semibold">{item.engine}</p>
-                    <p className="text-xs text-gray-600 mt-1">Isp: {item.Isp}s</p>
-                    <p className="text-lg font-bold text-blue-600 mt-2">
+                    <p className="text-xs text-muted-foreground mt-1">Isp: {item.Isp}s</p>
+                    <p className="text-lg font-bold text-primary mt-2">
                       {formatMass(item["Initial Mass"])}
                     </p>
-                    <p className="text-xs text-gray-600">Initial Mass</p>
+                    <p className="text-xs text-muted-foreground">Initial Mass</p>
                   </div>
                 ))}
               </div>
@@ -210,7 +210,7 @@ export function MissionVisualizations({
           {/* Mass Fraction Bar Chart */}
           <TabsContent value="fractions" className="mt-6">
             <div className="space-y-4">
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-muted-foreground">
                 Percentage breakdown of total spacecraft mass
               </p>
               <ResponsiveContainer width="100%" height={300}>
@@ -231,16 +231,16 @@ export function MissionVisualizations({
 
               <div className="grid grid-cols-3 gap-4 mt-6">
                 {massFractionData.map((item, idx) => (
-                  <div key={item.name} className="p-3 bg-gray-50 rounded-lg">
+                  <div key={item.name} className="p-3 bg-muted/50 rounded-lg">
                     <div
                       className="w-3 h-3 rounded-full mb-2"
                       style={{ backgroundColor: COLORS[idx] }}
                     />
                     <p className="text-sm font-semibold">{item.name}</p>
-                    <p className="text-lg font-bold text-blue-600">
+                    <p className="text-lg font-bold text-primary">
                       {item.percentage.toFixed(1)}%
                     </p>
-                    <p className="text-xs text-gray-600">{formatMass(item.mass)}</p>
+                    <p className="text-xs text-muted-foreground">{formatMass(item.mass)}</p>
                   </div>
                 ))}
               </div>

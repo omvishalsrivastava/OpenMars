@@ -136,7 +136,7 @@ export function MissionComparison({ baseInputs }: MissionComparisonProps) {
             <ArrowRightLeft className="w-5 h-5 text-blue-600" />
             <h3 className="text-2xl font-bold">Mission Comparison</h3>
           </div>
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             Compare two propulsion systems for the same mission parameters
           </p>
         </div>
@@ -187,7 +187,7 @@ export function MissionComparison({ baseInputs }: MissionComparisonProps) {
               </thead>
               <tbody>
                 {comparisonDetails.map((detail, idx) => (
-                  <tr key={idx} className="border-b border-gray-100 hover:bg-gray-50">
+                  <tr key={idx} className="border-b border-border/50 hover:bg-muted/50">
                     <td className="py-3 px-3 font-medium">{detail.label}</td>
                     <td className="text-center py-3 px-3">{detail.value1}</td>
                     <td className="text-center py-3 px-3">{detail.value2}</td>
@@ -215,15 +215,15 @@ export function MissionComparison({ baseInputs }: MissionComparisonProps) {
 
         {/* System Descriptions */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-4 bg-gray-50 rounded-lg">
+          <div className="p-4 bg-muted/50 rounded-lg">
             <p className="font-semibold mb-2">{engine1.name}</p>
-            <p className="text-sm text-gray-600">{engine1.description}</p>
-            <p className="text-xs text-gray-500 mt-2">Default Isp: {engine1.ispDefault}s</p>
+            <p className="text-sm text-muted-foreground">{engine1.description}</p>
+            <p className="text-xs text-muted-foreground/70 mt-2">Default Isp: {engine1.ispDefault}s</p>
           </div>
-          <div className="p-4 bg-gray-50 rounded-lg">
+          <div className="p-4 bg-muted/50 rounded-lg">
             <p className="font-semibold mb-2">{engine2.name}</p>
-            <p className="text-sm text-gray-600">{engine2.description}</p>
-            <p className="text-xs text-gray-500 mt-2">Default Isp: {engine2.ispDefault}s</p>
+            <p className="text-sm text-muted-foreground">{engine2.description}</p>
+            <p className="text-xs text-muted-foreground/70 mt-2">Default Isp: {engine2.ispDefault}s</p>
           </div>
         </div>
       </div>
