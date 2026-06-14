@@ -29,7 +29,7 @@ export default function Advanced() {
               <img src="/mars-ultra.png" alt="Mars" className="w-full h-full object-cover" />
             </div>
             <div>
-              <h1 className="text-2xl md:text-3xl font-bold">OpenMars Advanced</h1>
+              <h1 className="text-2xl md:text-3xl font-bold">Open-Mars Advanced</h1>
               <p className="text-sm text-gray-600">
                 Mission Comparison & Mars Mission Planner
               </p>

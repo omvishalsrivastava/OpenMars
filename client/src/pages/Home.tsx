@@ -35,7 +35,7 @@ export default function Home() {
             <div className="w-8 h-8 rounded-full overflow-hidden border border-primary/20">
               <img src="/mars-ultra.png" alt="Mars" className="w-full h-full object-cover" />
             </div>
-            <span className="text-xl font-bold tracking-tight">OpenMars</span>
+            <span className="text-xl font-bold tracking-tight">Open-Mars</span>
           </div>
           <div className="flex items-center gap-6">
             <Link href="/advanced" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
@@ -137,10 +137,10 @@ export default function Home() {
             <div className="w-6 h-6 rounded-full overflow-hidden border border-primary/20">
               <img src="/mars-ultra.png" alt="Mars" className="w-full h-full object-cover" />
             </div>
-            <span className="font-bold tracking-tight">OpenMars</span>
+            <span className="font-bold tracking-tight">Open-Mars</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2026 OpenMars Aerospace. All rights reserved.
+            © 2026 Open-Mars Aerospace. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors">Privacy</a>
