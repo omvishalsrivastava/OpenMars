@@ -26,7 +26,7 @@ export default function Advanced() {
         <div className="container py-4 md:py-6">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full overflow-hidden border border-primary/20">
-              <img src="/mars-v4.png" alt="Mars" className="w-full h-full object-cover" />
+              <img src="/mars-final.png" alt="Mars" className="w-full h-full object-cover" />
             </div>
             <div>
               <h1 className="text-2xl md:text-3xl font-bold">OpenMars Advanced</h1>

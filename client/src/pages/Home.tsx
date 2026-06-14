@@ -33,7 +33,7 @@ export default function Home() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-full overflow-hidden border border-primary/20">
-              <img src="/mars-v4.png" alt="Mars" className="w-full h-full object-cover" />
+              <img src="/mars-final.png" alt="Mars" className="w-full h-full object-cover" />
             </div>
             <span className="text-xl font-bold tracking-tight">OpenMars</span>
           </div>
@@ -53,10 +53,10 @@ export default function Home() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-40 pointer-events-none">
           <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/20 blur-[120px] rounded-full" />
           <div className="absolute top-[-50px] right-[-100px] w-[500px] h-[500px] animate-pulse-slow opacity-20">
-            <img src="/mars-v4.png" alt="Mars" className="w-full h-full object-contain" />
+            <img src="/mars-final.png" alt="Mars" className="w-full h-full object-contain" />
           </div>
           <div className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] animate-pulse-slow opacity-10" style={{ animationDelay: '2s' }}>
-            <img src="/mars-v4.png" alt="Mars" className="w-full h-full object-contain rotate-180" />
+            <img src="/mars-final.png" alt="Mars" className="w-full h-full object-contain rotate-180" />
           </div>
         </div>
         
@@ -116,7 +116,7 @@ export default function Home() {
             ) : (
               <div className="h-full flex flex-col items-center justify-center p-12 text-center space-y-6 rounded-2xl border-2 border-dashed border-border/50 bg-muted/20">
                 <div className="p-6 rounded-2xl bg-background shadow-sm">
-                  <img src="/mars-v4.png" alt="Mars" className="w-16 h-16 object-contain opacity-40 grayscale" />
+                  <img src="/mars-final.png" alt="Mars" className="w-16 h-16 object-contain opacity-40 grayscale" />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Awaiting Mission Parameters</h3>
@@ -135,7 +135,7 @@ export default function Home() {
         <div className="container flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full overflow-hidden border border-primary/20">
-              <img src="/mars-v4.png" alt="Mars" className="w-full h-full object-cover" />
+              <img src="/mars-final.png" alt="Mars" className="w-full h-full object-cover" />
             </div>
             <span className="font-bold tracking-tight">OpenMars</span>
           </div>
