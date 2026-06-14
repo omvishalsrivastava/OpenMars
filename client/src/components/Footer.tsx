@@ -16,7 +16,7 @@ export function Footer() {
           <Link href="/privacy" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Privacy</Link>
           <Link href="/terms" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Terms</Link>
           <Link href="/disclaimer" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Disclaimer</Link>
-          <a href="mailto:contact@openmars.example.com" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
+          <a href="mailto:omvishalsrivastava@gmail.com" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
         </div>
 
         <div className="pt-8 border-t border-border/50 w-full">

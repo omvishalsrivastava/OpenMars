@@ -78,7 +78,7 @@ export default function Privacy() {
             <h2 className="text-2xl font-bold">Contact Us</h2>
             <p>
               If you have any questions regarding this privacy policy, you may contact us at: 
-              <span className="text-primary font-medium"> contact@openmars.example.com</span>
+              <span className="text-primary font-medium"> omvishalsrivastava@gmail.com</span>
             </p>
           </section>
         </div>
