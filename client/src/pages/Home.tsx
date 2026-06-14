@@ -3,7 +3,7 @@ import { MissionInputs, MissionCalculations } from "@shared/propulsion";
 import { MissionInputForm } from "@/components/MissionInputForm";
 import { ResultsDashboard } from "@/components/ResultsDashboard";
 import { MissionVisualizations } from "@/components/MissionVisualizations";
-import { Rocket, Globe, ChevronRight, Github } from "lucide-react";
+import { Rocket, Globe, ChevronRight, Github, Menu, X } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,7 @@ export default function Home() {
     inputs: MissionInputs;
     results: MissionCalculations;
   } | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleCalculate = (
     inputs: MissionInputs,
@@ -39,7 +40,9 @@ export default function Home() {
             </div>
             <span className="text-xl font-bold tracking-tight">OpenMars</span>
           </div>
-          <div className="flex items-center gap-6">
+          
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-6">
             <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               About
             </Link>
@@ -51,38 +54,59 @@ export default function Home() {
             </a>
             <ThemeToggle />
           </div>
+
+          {/* Mobile Nav Toggle */}
+          <div className="flex md:hidden items-center gap-2">
+            <ThemeToggle />
+            <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </Button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-border/50 bg-background/95 backdrop-blur-md animate-in slide-in-from-top duration-200">
+            <div className="container py-6 flex flex-col gap-4">
+              <Link href="/about" className="text-lg font-medium py-2" onClick={() => setIsMenuOpen(false)}>About</Link>
+              <Link href="/advanced" className="text-lg font-medium py-2" onClick={() => setIsMenuOpen(false)}>Advanced</Link>
+              <a href="https://github.com/omvishalsrivastava/OpenMars" target="_blank" rel="noreferrer" className="text-lg font-medium py-2 flex items-center gap-2">
+                <Github className="w-5 h-5" /> GitHub
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32">
+      <section className="relative overflow-hidden pt-12 pb-20 md:pt-24 md:pb-32">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-40 pointer-events-none">
           <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/20 blur-[120px] rounded-full" />
-          <div className="absolute top-[-50px] right-[-100px] w-[500px] h-[500px] animate-pulse-slow opacity-20">
+          <div className="absolute top-[-50px] right-[-150px] md:right-[-100px] w-[300px] h-[300px] md:w-[500px] md:h-[500px] animate-pulse-slow opacity-20">
             <img src="/mars-ultra.png" alt="Mars" className="w-full h-full object-contain" />
           </div>
-          <div className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] animate-pulse-slow opacity-10" style={{ animationDelay: '2s' }}>
+          <div className="absolute bottom-[-100px] left-[-150px] md:left-[-100px] w-[250px] h-[250px] md:w-[400px] md:h-[400px] animate-pulse-slow opacity-10" style={{ animationDelay: '2s' }}>
             <img src="/mars-ultra.png" alt="Mars" className="w-full h-full object-contain rotate-180" />
           </div>
         </div>
         
-        <div className="container text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider animate-fade-in">
+        <div className="container text-center space-y-6 md:space-y-8 px-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] md:text-xs font-bold uppercase tracking-wider animate-fade-in">
             <Globe className="w-3.5 h-3.5" />
             Next-Gen Mission Design
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl mx-auto leading-[1.1] animate-fade-in">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl mx-auto leading-[1.2] md:leading-[1.1] animate-fade-in">
             Engineer Your Journey to the <span className="text-primary">Red Planet</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in px-2" style={{ animationDelay: '0.1s' }}>
             A high-fidelity aerospace mission planning platform for calculating propulsion requirements, mass fractions, and transit trajectories.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <Button size="lg" className="h-12 px-8 font-bold cursor-pointer" onClick={() => document.getElementById('planner')?.scrollIntoView({ behavior: 'smooth' })}>
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 animate-fade-in pt-4" style={{ animationDelay: '0.2s' }}>
+            <Button size="lg" className="h-12 px-8 font-bold cursor-pointer w-full sm:w-auto" onClick={() => document.getElementById('planner')?.scrollIntoView({ behavior: 'smooth' })}>
               Start Planning <ChevronRight className="ml-2 w-4 h-4" />
             </Button>
-            <Link href="/advanced" className="cursor-pointer">
-              <Button variant="outline" size="lg" className="h-12 px-8 font-bold cursor-pointer">
+            <Link href="/advanced" className="cursor-pointer w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="h-12 px-8 font-bold cursor-pointer w-full sm:w-auto">
                 Advanced Mode
               </Button>
             </Link>

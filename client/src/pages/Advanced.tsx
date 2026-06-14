@@ -4,11 +4,12 @@ import { MissionInputForm } from "@/components/MissionInputForm";
 import { MissionComparison } from "@/components/MissionComparison";
 import { MarsMissionPlanner } from "@/components/MarsMissionPlanner";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Rocket, Zap, Globe } from "lucide-react";
+import { Rocket, Zap, Globe, Menu, X } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Advanced() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [missionData, setMissionData] = useState<{
     inputs: MissionInputs;
     results: MissionCalculations;
@@ -24,25 +25,44 @@ export default function Advanced() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-white to-gray-50 flex flex-col">
       {/* Header */}
-      <header className="border-b border-gray-200 bg-white/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container py-4 md:py-6">
+      <header className="border-b border-border/50 bg-background/80 backdrop-blur-md sticky top-0 z-50">
+        <div className="container flex h-16 md:h-20 items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full overflow-hidden border border-primary/20">
+            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border border-primary/20">
               <img src="/mars-ultra.png" alt="Mars" className="w-full h-full object-cover" />
             </div>
             <Link href="/">
               <div className="cursor-pointer">
-                <h1 className="text-2xl md:text-3xl font-bold">OpenMars Advanced</h1>
-                <p className="text-sm text-gray-600">
-                  Mission Comparison & Mars Mission Planner
+                <h1 className="text-lg md:text-2xl font-bold tracking-tight">OpenMars</h1>
+                <p className="text-[8px] md:text-xs text-muted-foreground uppercase tracking-widest font-bold">
+                  Advanced Planner
                 </p>
               </div>
             </Link>
           </div>
-          <div className="flex items-center gap-4">
+          
+          <div className="hidden md:flex items-center gap-6">
+            <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">About</Link>
+            <Link href="/advanced" className="text-sm font-medium text-primary transition-colors">Advanced</Link>
             <ThemeToggle />
           </div>
+
+          <div className="flex md:hidden items-center gap-2">
+            <ThemeToggle />
+            <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </Button>
+          </div>
         </div>
+
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-border/50 bg-background/95 backdrop-blur-md animate-in slide-in-from-top duration-200">
+            <div className="container py-6 flex flex-col gap-4">
+              <Link href="/about" className="text-lg font-medium py-2" onClick={() => setIsMenuOpen(false)}>About</Link>
+              <Link href="/advanced" className="text-lg font-medium py-2 text-primary" onClick={() => setIsMenuOpen(false)}>Advanced</Link>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Main Content */}
