@@ -72,11 +72,11 @@ export default function Home() {
             A high-fidelity aerospace mission planning platform for calculating propulsion requirements, mass fractions, and transit trajectories.
           </p>
           <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <Button size="lg" className="h-12 px-8 font-bold" onClick={() => document.getElementById('planner')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button size="lg" className="h-12 px-8 font-bold cursor-pointer" onClick={() => document.getElementById('planner')?.scrollIntoView({ behavior: 'smooth' })}>
               Start Planning <ChevronRight className="ml-2 w-4 h-4" />
             </Button>
-            <Link href="/advanced">
-              <Button variant="outline" size="lg" className="h-12 px-8 font-bold">
+            <Link href="/advanced" className="cursor-pointer">
+              <Button variant="outline" size="lg" className="h-12 px-8 font-bold cursor-pointer">
                 Advanced Mode
               </Button>
             </Link>

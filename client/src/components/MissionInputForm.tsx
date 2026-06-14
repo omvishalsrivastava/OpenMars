@@ -183,14 +183,14 @@ export function MissionInputForm({ onCalculate }: MissionInputFormProps) {
               <button 
                 type="button"
                 onClick={() => setMissionDeltaV(9700)}
-                className="text-[10px] px-2 py-0.5 rounded bg-muted hover:bg-muted/80 text-muted-foreground transition-colors"
+                className="text-[10px] px-2 py-0.5 rounded bg-muted hover:bg-muted/80 text-muted-foreground transition-colors cursor-pointer"
               >
                 Hohmann: 9,700 m/s
               </button>
               <button 
                 type="button"
                 onClick={() => setMissionDeltaV(15500)}
-                className="text-[10px] px-2 py-0.5 rounded bg-muted hover:bg-muted/80 text-muted-foreground transition-colors"
+                className="text-[10px] px-2 py-0.5 rounded bg-muted hover:bg-muted/80 text-muted-foreground transition-colors cursor-pointer"
               >
                 Fast: 15,500 m/s
               </button>
@@ -209,7 +209,7 @@ export function MissionInputForm({ onCalculate }: MissionInputFormProps) {
                     setEngineType(key as EngineType);
                     setUseCustomIsp(false);
                   }}
-                  className={`p-4 rounded-xl border-2 text-left transition-all duration-200 ${
+                  className={`p-4 rounded-xl border-2 text-left transition-all duration-200 cursor-pointer ${
                     engineType === key
                       ? "border-primary bg-primary/5 shadow-sm ring-1 ring-primary/20"
                       : "border-transparent bg-muted/30 hover:bg-muted/50"

@@ -42,11 +42,11 @@ export default function Advanced() {
       <main className="container py-8 md:py-12">
         <Tabs defaultValue="comparison" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="comparison" className="flex items-center gap-2">
+            <TabsTrigger value="comparison" className="flex items-center gap-2 cursor-pointer">
               <Zap className="w-4 h-4" />
               <span className="hidden sm:inline">Comparison</span>
             </TabsTrigger>
-            <TabsTrigger value="planner" className="flex items-center gap-2">
+            <TabsTrigger value="planner" className="flex items-center gap-2 cursor-pointer">
               <Globe className="w-4 h-4" />
               <span className="hidden sm:inline">Mars Planner</span>
             </TabsTrigger>

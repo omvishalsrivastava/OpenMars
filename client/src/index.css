@@ -113,17 +113,18 @@
   animation: pulse-slow 8s ease-in-out infinite;
 }
 
-/* Ensure interactive elements show the pointer cursor */
+/* Force interactive elements to show the pointer cursor */
 button, 
 [role="button"],
 a,
 input[type="submit"],
 input[type="button"],
-label {
-  cursor: pointer;
+label,
+.cursor-pointer {
+  cursor: pointer !important;
 }
 
 button:disabled,
 [role="button"]:disabled {
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
