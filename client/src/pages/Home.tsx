@@ -53,10 +53,10 @@ export default function Home() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-40 pointer-events-none">
           <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/20 blur-[120px] rounded-full" />
           <div className="absolute top-[-50px] right-[-100px] w-[500px] h-[500px] animate-pulse-slow opacity-20">
-            <img src="/mars.png?v=2" alt="Mars" className="w-full h-full object-contain" />
+            <img src="/mars-v3.png" alt="Mars" className="w-full h-full object-contain" />
           </div>
           <div className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] animate-pulse-slow opacity-10" style={{ animationDelay: '2s' }}>
-            <img src="/mars.png?v=2" alt="Mars" className="w-full h-full object-contain rotate-180" />
+            <img src="/mars-v3.png" alt="Mars" className="w-full h-full object-contain rotate-180" />
           </div>
         </div>
         
