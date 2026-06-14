@@ -32,8 +32,8 @@ export default function Home() {
       <nav className="border-b border-border/50 bg-background/80 backdrop-blur-md sticky top-0 z-50">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="p-1.5 rounded-lg bg-primary">
-              <Rocket className="w-5 h-5 text-primary-foreground" />
+            <div className="w-8 h-8 rounded-full overflow-hidden border border-primary/20">
+              <img src="/mars-v4.png" alt="Mars" className="w-full h-full object-cover" />
             </div>
             <span className="text-xl font-bold tracking-tight">OpenMars</span>
           </div>
@@ -116,7 +116,7 @@ export default function Home() {
             ) : (
               <div className="h-full flex flex-col items-center justify-center p-12 text-center space-y-6 rounded-2xl border-2 border-dashed border-border/50 bg-muted/20">
                 <div className="p-6 rounded-2xl bg-background shadow-sm">
-                  <Rocket className="w-16 h-16 text-muted-foreground/40" />
+                  <img src="/mars-v4.png" alt="Mars" className="w-16 h-16 object-contain opacity-40 grayscale" />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Awaiting Mission Parameters</h3>
@@ -134,8 +134,8 @@ export default function Home() {
       <footer className="border-t border-border/50 py-12 bg-muted/30">
         <div className="container flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
-            <div className="p-1 rounded bg-primary/20">
-              <Rocket className="w-4 h-4 text-primary" />
+            <div className="w-6 h-6 rounded-full overflow-hidden border border-primary/20">
+              <img src="/mars-v4.png" alt="Mars" className="w-full h-full object-cover" />
             </div>
             <span className="font-bold tracking-tight">OpenMars</span>
           </div>

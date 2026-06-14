@@ -68,8 +68,8 @@ export function MissionInputForm({ onCalculate }: MissionInputFormProps) {
 
   return (
     <Card className="card-elevated p-6 md:p-8 overflow-hidden relative">
-      <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
-        <Rocket className="w-32 h-32 rotate-45" />
+      <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+        <img src="/mars-v4.png" alt="Mars" className="w-32 h-32 object-contain" />
       </div>
 
       <div className="space-y-8 relative z-10">
