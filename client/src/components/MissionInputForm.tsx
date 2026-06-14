@@ -276,7 +276,7 @@ export function MissionInputForm({ onCalculate }: MissionInputFormProps) {
           <Button
             onClick={handleCalculate}
             size="lg"
-            className="w-full h-12 text-base font-bold shadow-lg shadow-primary/20 transition-all active:scale-[0.98]"
+            className="w-full h-12 text-base font-bold shadow-lg shadow-primary/20 transition-all active:scale-[0.98] cursor-pointer"
           >
             Analyze Mission
           </Button>
